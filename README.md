@@ -49,7 +49,7 @@ This cheat sheet summarizes the essential ideas and commands that help you under
 - Commonly used for databases, user uploads, etc.
 
 **Example (in `docker-compose.yml`):**
-```yaml
+```
 volumes:
   - db-data:/var/lib/postgresql/data
 ```
@@ -66,10 +66,10 @@ volumes:
 - Great for development (e.g., mount your source code for live editing).
 
 **Example (in `docker-compose.yml`):**
-```yaml
+
 volumes:
   - .:/usr/src/app
-```
+
 
 ---
 
