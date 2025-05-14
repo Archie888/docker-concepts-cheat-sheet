@@ -14,6 +14,9 @@ This cheat sheet summarizes the essential ideas and commands that help you under
 - Built from a Dockerfile.
 - Immutable (doesn’t change after it’s built).
 - **Example:** `node:18`, `postgres:16`, or your custom `mycompany/base-server`.
+- Occupies **disk space only** — not loaded into RAM unless a container is started.
+  - Stored on disk in the Docker engine’s storage backend (e.g., `/var/lib/docker` on Linux).
+  - On Windows/macOS, Docker runs in a lightweight Linux VM, and images are stored inside the VM’s disk volume.
 
 ### 2. **Container**
 - A running instance of an image.
