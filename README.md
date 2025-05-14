@@ -21,7 +21,6 @@ This cheat sheet summarizes the essential ideas and commands that help you under
 - Isolated from the host and other containers.
 - Has its own filesystem (stored on disk alongside the image), processes, and network.
 - Multiple containers can be created from the same image.
-- Runs in **RAM** as a live instance created from an image.
 
 ### 3. **Dockerfile**
 - A script with instructions to build a Docker image.
