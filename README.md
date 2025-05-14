@@ -14,15 +14,14 @@ This cheat sheet summarizes the essential ideas and commands that help you under
 - Built from a Dockerfile.
 - Immutable (doesn’t change after it’s built).
 - **Example:** `node:18`, `postgres:16`, or your custom `mycompany/base-server`.
-- Occupies **disk space only** — not loaded into RAM unless a container is started.
-  - Stored on disk in the Docker engine’s storage backend (e.g., `/var/lib/docker` on Linux).
-  - On Windows/macOS, Docker runs in a lightweight Linux VM, and images are stored inside the VM’s disk volume.
+- Occupies **disk space only** — serves as a **template** to create containers, but is not loaded into RAM itself.
 
 ### 2. **Container**
 - A running instance of an image.
 - Isolated from the host and other containers.
-- Has its own filesystem, processes, and network.
+- Has its own filesystem (stored on disk alongside the image), processes, and network.
 - Multiple containers can be created from the same image.
+- Runs in **RAM** as a live instance created from an image.
 
 ### 3. **Dockerfile**
 - A script with instructions to build a Docker image.
@@ -44,6 +43,7 @@ This cheat sheet summarizes the essential ideas and commands that help you under
 - A persistent storage mechanism managed by Docker.
 - Data persists even if the container is deleted.
 - Commonly used for databases, user uploads, etc.
+- A container can use one or more volumes, defined in `docker-compose.yml` or at runtime (e.g., `docker run -v`).
 
 **Example (in `docker-compose.yml`):**
   ```
