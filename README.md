@@ -14,7 +14,7 @@ This cheat sheet summarizes the essential ideas and commands that help you under
 - Built from a Dockerfile.
 - Immutable (doesn’t change after it’s built).
 - **Example:** `node:18`, `postgres:16`, or your custom `mycompany/base-server`.
-- Occupies **disk space only** — serves as a **template** to create containers.
+- Stored on disk — serves as a **template** to create containers.
 
 ### 2. **Container**
 - A running instance of an image.
